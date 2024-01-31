@@ -1,5 +1,5 @@
-NAME = fight
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+NAME = Fixed
+SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++
