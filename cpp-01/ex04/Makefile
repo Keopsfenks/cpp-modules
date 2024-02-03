@@ -1,7 +1,6 @@
 NAME = file
-SRCS = main.cpp fman.cpp
+SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
-
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -15,6 +14,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@$(RM)  $(OBJS)
+	@$(RM) $(wildcard *.replace)
 
 fclean: clean
 	@$(RM) $(NAME)
