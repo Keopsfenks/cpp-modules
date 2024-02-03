@@ -1,5 +1,5 @@
-NAME = file
-SRCS = main.cpp fman.cpp
+NAME = Harl
+SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++

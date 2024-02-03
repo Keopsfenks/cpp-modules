@@ -1,4 +1,4 @@
-NAME = Harl
+NAME = harlFilter
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
