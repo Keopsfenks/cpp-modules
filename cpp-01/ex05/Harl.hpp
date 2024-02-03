@@ -9,6 +9,6 @@ class Harl {
         void error();
     public :
         void complain(std::string level);
+		void (Harl::*func[4])(void);
 };
 
-typedef void (Harl::*voidArray)();

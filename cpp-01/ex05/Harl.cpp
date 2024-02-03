@@ -18,7 +18,8 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level) {
     int i;
-    voidArray comp[4] = {
+
+	void (Harl::*func[4])() = {
 			&Harl::debug,
 			&Harl::info,
 			&Harl::warning,
@@ -32,7 +33,7 @@ void Harl::complain(std::string level) {
 	};
     for (i = 0; i < 4; i++)
         if(selectLevel[i] == level) {
-            (this->*comp[i])();
+            (this->*func[i])();
             break;
         }
 }
