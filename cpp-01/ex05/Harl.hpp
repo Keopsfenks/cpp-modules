@@ -11,4 +11,4 @@ class Harl {
         void complain(std::string level);
 };
 
-typedef void (Harl::*complains)();
+typedef void (Harl::*voidArray)();

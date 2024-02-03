@@ -18,7 +18,7 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level) {
     int i;
-    complains comp[4] = {
+    voidArray comp[4] = {
 			&Harl::debug,
 			&Harl::info,
 			&Harl::warning,
