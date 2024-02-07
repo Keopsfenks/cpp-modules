@@ -3,7 +3,6 @@
 //
 
 #include "Fixed.hpp"
-#include "../ex02/Fixed.hpp"
 
 
 Fixed::Fixed() {
@@ -53,8 +52,8 @@ std::ostream &operator<<(std::ostream &output, const Fixed &fixed) {
 }
 
 float Fixed::toFloat() const {
-	int		scaleFactor = pow(2, this->bits);
-	float	num = static_cast<float>(this->value) / scaleFactor;
+	int		scaleFactor = 1.0f + pow(2, this->bits);
+	float	num = static_cast<float>(this->value) * scaleFactor;
 	return	num;
 }
 

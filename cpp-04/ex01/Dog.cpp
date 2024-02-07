@@ -5,7 +5,8 @@
 #include "Dog.hpp"
 
 Dog::Dog() {
-	this->type = "Unknown";
+	this->type = "Dog";
+	this->brain = new Brain;
 	std::cout << "Animal:Dog constructor is running!" << std::endl;
 }
 
@@ -16,12 +17,14 @@ Dog::Dog(const Dog *copy) {
 
 Dog &Dog::operator=(const Dog *copy) {
 	this->type = copy->type;
+	this->brain = copy->brain;
 	std::cout << "Animal:Dog copy assignment constructor is running!" << std::endl;
 	return *this;
 }
 
 Dog::~Dog() {
 	std::cout << "Animal:Dog destructor is running!" << std::endl;
+	delete this->brain;
 }
 
 void Dog::makeSound() const {

@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = Animal
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
